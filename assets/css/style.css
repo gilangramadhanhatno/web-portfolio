@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
@@ -10,7 +5,6 @@ body {
 
 a {
   color: #149ddd;
-  text-decoration: none;
 }
 
 a:hover {
@@ -27,30 +21,29 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
-/* Start Header */
-.header {
+#header {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   width: 300px;
-  transition: all 500ms ease-in-out;
+  transition: all ease-in-out 0.5s;
   z-index: 9997;
-  transition: all 500ms;
+  transition: all 0.3s;
   padding: 0 15px;
-  background-color: #040b14;
+  background: #040b14;
   overflow-y: auto;
 }
 
-.header .profile img {
+#header .profile img {
   margin: 15px auto;
   display: block;
   width: 120px;
   border: 8px solid #2c2f3f;
 }
 
-.header .profile h1 {
-  font-size: 21px;
+#header .profile h1 {
+  font-size: 24px;
   margin: 0;
   padding: 0;
   font-weight: 600;
@@ -59,29 +52,29 @@ h6 {
   font-family: "Poppins", sans-serif;
 }
 
-.header .profile .social-links a {
+#header .profile .social-links a {
   font-size: 18px;
   display: inline-block;
-  background-color: #212431;
+  background: #212431;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
   border-radius: 50px;
-  text-align: center;
+  text-align-last: center;
   width: 36px;
   height: 36px;
-  transition: 300ms;
+  transition: 0.3s;
 }
 
-.header .profile .social-links a:hover {
-  background-color: #149ddd;
+#header .profile .social-links a:hover {
+  background: #149ddd;
   color: #fff;
   text-decoration: none;
 }
 
-.header .profile h1 a,
-.header .profile h1 a:hover {
+#header .profile h1 a,
+#header .profile h1 a:hover {
   color: #fff;
   text-decoration: none;
 }
@@ -91,7 +84,7 @@ h6 {
 }
 
 @media (max-width: 1199px) {
-  .header {
+  #header {
     left: -300px;
   }
   #main {
@@ -99,7 +92,7 @@ h6 {
   }
 }
 
-/* Start Navigation Menu */
+/* Navigation Menu */
 .nav-menu {
   padding-top: 30px;
 }
@@ -121,7 +114,7 @@ h6 {
   color: #a8a9b4;
   padding: 12px 15px;
   margin-bottom: 8px;
-  transition: 300ms;
+  transition: 0.5s;
   font-size: 15px;
 }
 
@@ -138,12 +131,13 @@ h6 {
   color: #fff;
 }
 
-.nav-menu a:hover i,
+.nav-menu a:hover,
 .nav-menu .active > a i,
 .nav-menu li:hover > a i {
   color: #149ddd;
 }
-/* Mobile Navigation */
+
+/* Mobile Toggle Menu */
 .mobile-nav-toggle {
   position: fixed;
   right: 15px;
@@ -152,8 +146,8 @@ h6 {
   border: 0;
   background: none;
   font-size: 24px;
-  transition: all 400ms;
-  outline: none !important;
+  transition: all 0.4s;
+  outline: none i !important;
   line-height: 1;
   cursor: pointer;
   text-align: right;
@@ -167,8 +161,10 @@ h6 {
   overflow: hidden;
 }
 
-.mobile-nav-active .header {
+.mobile-nav-active #header {
   left: 0;
 }
-/* End Navigation Menu */
-/* End Header */
+
+.mobile-nav-active .mobile-nav-toggle i {
+  color: #fff;
+}
